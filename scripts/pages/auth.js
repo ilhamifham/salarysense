@@ -25,7 +25,7 @@ form.addEventListener("submit", function (event) {
             password.classList.add("color-border-error");
             password.focus();
         }
-    } else if (currentPath === "/pages/login.html") {
+    } else if (currentPath === "/salarysense/pages/login.html") {
         if (username.value !== localStorage.getItem("username")) {
             event.preventDefault();
             errorMessage.innerHTML = "<p>Username don't exist</p>";
@@ -42,9 +42,9 @@ form.addEventListener("submit", function (event) {
             password.focus();
         } else {
             localStorage.setItem("token", username.value + password.value);
-            window.location.replace("/pages/home.html");
+            window.location.replace("/salarysense/pages/home.html");
         }
-    } else if (currentPath === "/pages/signup.html") {
+    } else if (currentPath === "/salarysense/pages/signup.html") {
         if (username.value === localStorage.getItem("username")) {
             event.preventDefault();
             errorMessage.innerHTML = "<p>Username already exist</p>";
@@ -57,7 +57,7 @@ form.addEventListener("submit", function (event) {
             localStorage.setItem("username", username.value);
             localStorage.setItem("password", password.value);
             localStorage.setItem("token", username.value + password.value);
-            window.location.replace("/pages/home.html");
+            window.location.replace("/salarysense/pages/home.html");
         }
     }
 
