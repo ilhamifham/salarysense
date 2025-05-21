@@ -21,6 +21,11 @@
             localStorage.removeItem("token");
             window.location.replace("/salarysense/");
         })
+
+        history.pushState(null, "", location.href);
+        window.addEventListener("popstate", function () {
+            history.pushState(null, "", location.href);
+        })
     </script>
 </body>
 
