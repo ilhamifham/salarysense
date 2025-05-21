@@ -7,25 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Simple salary expense tracker to help you plan, save, and control your monthly salary.">
     <title>Monthly Salary Expense Tracker</title>
-    <link rel="stylesheet" href="../styles/css/styles.css">
+    <link rel="stylesheet" href="../styles/styles.scss">
     <script src="../scripts/scripts.js"></script>
 </head>
 
 <body>
-    <section>Home</section>
-    <button>Log Out</button>
-
+    <section>
+        <p></p>
+        <button>Log Out</button>
+    </section>
     <script>
+        const p = document.querySelector("p");
         const btn = document.querySelector("button");
+        const user = JSON.parse(localStorage.getItem("user"));
+
         btn.addEventListener("click", () => {
             localStorage.removeItem("token");
-            window.location.replace("/salarysense/");
+            window.location.replace("/");
         })
 
-        history.pushState(null, "", location.href);
-        window.addEventListener("popstate", function () {
-            history.pushState(null, "", location.href);
-        })
+        p.innerText = `${user?.username}`;
     </script>
 </body>
 
