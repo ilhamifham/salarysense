@@ -1,3 +1,5 @@
+window.location.reload();
+
 (function () {
     const token = localStorage.getItem("token");
     const userDetails = localStorage.getItem("username") + localStorage.getItem("password");
