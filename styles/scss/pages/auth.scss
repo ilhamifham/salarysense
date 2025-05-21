@@ -1,0 +1,61 @@
+@use "../shared";
+
+.view__auth {
+    padding: 1rem;
+    display: flex;
+
+    .wrapper {
+        margin: 0 auto;
+        padding: 1rem;
+        border-width: 1px;
+        border-style: solid;
+        width: 100%;
+        max-width: 28.125rem;
+    }
+
+    h1,
+    p {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    form {
+        margin: 2rem 0;
+    }
+
+    input {
+        margin: 0.5rem 0 1rem;
+        padding: 0.594rem;
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    #error-message {
+        font-size: 0.875rem;
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    button {
+        width: 100%;
+        margin-top: 0.5rem;
+        @extend %button;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-height: 29.0625rem) {
+    .view__auth {
+        height: 100dvh;
+        align-items: center;
+    }
+}

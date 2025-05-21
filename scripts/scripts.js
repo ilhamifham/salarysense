@@ -1,0 +1,17 @@
+(function () {
+    const token = localStorage.getItem("token");
+    const userDetails = localStorage.getItem("username") + localStorage.getItem("password");
+    const authenticated = token === userDetails;
+    const currentPath = window.location.pathname;
+    const allRoutes = ["/", "/pages/login.html", "/pages/signup.html", "/pages/home.html"];
+    const publicRoutes = allRoutes.slice(0, 3);
+    const privateRoute = allRoutes[3];
+
+    if (allRoutes.includes(currentPath)) {
+        if (authenticated && publicRoutes.includes(currentPath)) {
+            window.location.href = privateRoute;
+        } else if (!authenticated && currentPath === privateRoute) {
+            window.location.href = allRoutes[0];
+        }
+    }
+})();

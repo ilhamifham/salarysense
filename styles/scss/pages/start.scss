@@ -1,0 +1,61 @@
+@use "../shared";
+
+.view__start {
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+
+    .wrapper {
+        max-width: 31.25rem;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    p {
+        margin: 1rem 0 2rem;
+    }
+
+    a {
+        display: inline-block;
+        @extend %button;
+    }
+}
+
+@media screen and (min-height: 21.3125rem) {
+    .view__start {
+        height: 100dvh;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    .view__start {
+        .wrapper {
+            max-width: 37.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+@media screen and (min-width: 64rem) {
+    .view__start {
+        .wrapper {
+            max-width: 47.25rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+        }
+    }
+}
