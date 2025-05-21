@@ -1,5 +1,3 @@
-window.location.reload();
-
 (function () {
     const token = localStorage.getItem("token");
     const userDetails = localStorage.getItem("username") + localStorage.getItem("password");
@@ -11,9 +9,9 @@ window.location.reload();
 
     if (allRoutes.includes(currentPath)) {
         if (authenticated && publicRoutes.includes(currentPath)) {
-            window.location.href = privateRoute;
+            window.location.replace(privateRoute);
         } else if (!authenticated && currentPath === privateRoute) {
-            window.location.href = allRoutes[0];
+            window.location.replace(allRoutes[0]);
         }
     }
 })();

@@ -42,7 +42,8 @@ form.addEventListener("submit", function (event) {
             password.focus();
         } else {
             localStorage.setItem("token", username.value + password.value);
-            window.location.replace("/salarysense/pages/home.html");
+            history.replaceState(null, "", "/salarysense/pages/home.html");
+            window.location.reload();
         }
     } else if (currentPath === "/salarysense/pages/signup.html") {
         if (username.value === localStorage.getItem("username")) {
@@ -57,7 +58,8 @@ form.addEventListener("submit", function (event) {
             localStorage.setItem("username", username.value);
             localStorage.setItem("password", password.value);
             localStorage.setItem("token", username.value + password.value);
-            window.location.replace("/salarysense/pages/home.html");
+            history.replaceState(null, "", "/salarysense/pages/home.html");
+            window.location.reload();
         }
     }
 
