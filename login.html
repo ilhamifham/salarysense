@@ -12,24 +12,24 @@
     <script src="scripts/scripts.js"></script>
 </head>
 
-<body class="color-background">
+<body>
     <section class="view__auth">
-        <div class="wrapper color-border radius-sm color-background-2">
-            <h1 class="color-heading">Log In</h1>
-            <p class="color-description">Login to access your account</p>
+        <div class="wrapper">
+            <h1>Log In</h1>
+            <p>Login to access your account</p>
             <form>
                 <div>
-                    <label for="username" class="color-heading">Username</label>
-                    <input id="username" type="text" required pattern="^[a-z]+$" minlength="5" class="color-border color-description-2 radius-sm">
+                    <label for="username">Username</label>
+                    <input id="username" type="text" required pattern="^[a-z]+$" minlength="5">
                 </div>
                 <div>
-                    <label for="password" class="color-heading">Password</label>
-                    <input id="password" type="password" required minlength="5" class="color-border color-description-2 radius-sm">
+                    <label for="password">Password</label>
+                    <input id="password" type="password" required minlength="5">
                 </div>
-                <div id="error-message" class="color-error"></div>
-                <button class="color-accent color-white radius-sm">Log In</button>
+                <div id="error-message"></div>
+                <button>Log In</button>
             </form>
-            <p class="color-description">Don't have an account? <a href="signup.html" class="color-heading">Sign Up</a></p>
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
         </div>
     </section>
     <script src="scripts/pages/auth.js"></script>

@@ -10,93 +10,12 @@
 
 body {
     min-width: 20rem;
+    background-color: white;
+    color: #000000aa;
 }
 
 h1 {
     line-height: 1.25;
     font-weight: 600;
-}
-
-/* Colors */
-.color-heading {
-    color: #0e0711
-}
-
-.color-description {
-    color: #000000aa;
-}
-
-.color-description-2 {
-    color: black;
-}
-
-.color-border {
-    border-color: #00000025;
-}
-
-.color-background {
-    background-color: #f3ecf7;
-}
-
-.color-background-2 {
-    background-color: white;
-}
-
-.color-error {
-    color: #b30000;
-}
-
-.color-border-error {
-    border-color: #b30000;
-}
-
-.color-accent {
-    background-color: #8944ab;
-}
-
-.color-white {
-    color: white;
-}
-
-.color-black {
-    color: black;
-}
-
-@media(prefers-color-scheme: dark) {
-    .color-heading {
-        color: #f3ecf7;
-    }
-
-    .color-description {
-        color: #ffffff99;
-    }
-
-    .color-description-2 {
-        color: white;
-    }
-
-    .color-border {
-        border-color: #ffffff25;
-    }
-
-    .color-background {
-        background-color: #0e0711;
-    }
-
-    .color-background-2 {
-        background-color: black;
-    }
-
-    .color-error {
-        color: #ff6666;
-    }
-
-    .color-border-error {
-        border-color: #ff6666;
-    }
-}
-
-/* Radius */
-.radius-sm {
-    border-radius: 0.25rem;
+    color: #0e0711;
 }

@@ -10,32 +10,25 @@ form.addEventListener("submit", function (event) {
     const errorMessage = this.querySelector("#error-message");
 
     errorMessage.innerHTML = "";
-    username.classList.remove("color-border-error");
-    password.classList.remove("color-border-error");
 
     if (!username.value && !password.value) {
         username.focus();
     } else if (!username.value || !password.value) {
         if (!username.value) {
             errorMessage.innerHTML = "<p>Enter a username</p>";
-            username.classList.add("color-border-error");
             username.focus();
         } else {
             errorMessage.innerHTML = "<p>Enter a password</p>";
-            password.classList.add("color-border-error");
             password.focus();
         }
     } else if (currentPath === "/login.html") {
         if (username.value !== user?.username) {
             errorMessage.innerHTML = "<p>Username don't exist</p>";
-            username.classList.add("color-border-error");
-            password.classList.add("color-border-error");
             username.value = "";
             password.value = "";
             username.focus();
         } else if (password.value !== user.password) {
             errorMessage.innerHTML = "<p>Incorrect password</p>";
-            password.classList.add("color-border-error");
             password.value = "";
             password.focus();
         } else {
@@ -45,8 +38,6 @@ form.addEventListener("submit", function (event) {
     } else if (currentPath === "/signup.html") {
         if (username.value === user?.username) {
             errorMessage.innerHTML = "<p>Username already exist</p>";
-            username.classList.add("color-border-error");
-            password.classList.add("color-border-error");
             username.value = "";
             password.value = "";
             username.focus();

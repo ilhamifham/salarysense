@@ -7,8 +7,8 @@
     .wrapper {
         margin: 0 auto;
         padding: 1rem;
-        border-width: 1px;
-        border-style: solid;
+        border: 1px solid #00000025;
+        border-radius: 0.25rem;
         width: 100%;
         max-width: 28.125rem;
     }
@@ -27,15 +27,21 @@
         margin: 2rem 0;
     }
 
+    label {
+        color: #0e0711;
+    }
+
     input {
         margin: 0.5rem 0 1rem;
         padding: 0.594rem;
-        border-width: 1px;
-        border-style: solid;
+        border: 1px solid #00000025;
+        border-radius: 0.25rem;
+        color: black;
     }
 
     #error-message {
         font-size: 0.875rem;
+        color: #b30000;
 
         p {
             margin-bottom: 0.5rem;
@@ -46,10 +52,12 @@
         width: 100%;
         margin-top: 0.5rem;
         @extend %button;
+        @extend %button-accent;
     }
 
     a {
         text-decoration: underline;
+        color: #0e0711;
     }
 }
 
