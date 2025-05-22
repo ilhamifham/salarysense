@@ -3,7 +3,7 @@
     const user = JSON.parse(localStorage.getItem("user"));
     const authenticated = token === user?.username + user.password;
     const currentPath = window.location.pathname;
-    const allRoutes = ["/", "/pages/login.html", "/pages/signup.html", "/pages/home.html"];
+    const allRoutes = ["/", "/login.html", "/signup.html", "/home.html"];
     const publicRoutes = allRoutes.slice(0, 3);
     const privateRoute = allRoutes[3];
 

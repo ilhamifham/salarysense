@@ -25,7 +25,7 @@ form.addEventListener("submit", function (event) {
             password.classList.add("color-border-error");
             password.focus();
         }
-    } else if (currentPath === "/pages/login.html") {
+    } else if (currentPath === "/login.html") {
         if (username.value !== user?.username) {
             errorMessage.innerHTML = "<p>Username don't exist</p>";
             username.classList.add("color-border-error");
@@ -40,9 +40,9 @@ form.addEventListener("submit", function (event) {
             password.focus();
         } else {
             localStorage.setItem("token", username.value + password.value);
-            window.location.replace("/pages/home.html");
+            window.location.replace("/home.html");
         }
-    } else if (currentPath === "/pages/signup.html") {
+    } else if (currentPath === "/signup.html") {
         if (username.value === user?.username) {
             errorMessage.innerHTML = "<p>Username already exist</p>";
             username.classList.add("color-border-error");
@@ -53,7 +53,7 @@ form.addEventListener("submit", function (event) {
         } else {
             localStorage.setItem("user", JSON.stringify({ username: username.value, password: password.value }));
             localStorage.setItem("token", username.value + password.value);
-            window.location.replace("/pages/home.html")
+            window.location.replace("/home.html")
         }
     }
 
